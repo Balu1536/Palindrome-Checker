@@ -6,10 +6,10 @@ import java.awt.event.ActionListener;
 public class PalindromeChecker extends JFrame {
 
     // Constructor to set up the GUI
-    public PalindromeCheckerGUI() {
+    public PalindromeChecker() {
         // Set the title of the window
         setTitle("Palindrome Checker");
-        
+
         // Set the layout
         setLayout(new FlowLayout());
 
@@ -48,7 +48,7 @@ public class PalindromeChecker extends JFrame {
     public static boolean isPalindrome(String input) {
         // Remove spaces and punctuation, and convert to lowercase
         String cleanedInput = input.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
-        
+
         // Initialize pointers for the start and end of the string
         int left = 0;
         int right = cleanedInput.length() - 1;
@@ -67,6 +67,6 @@ public class PalindromeChecker extends JFrame {
     // Main method to run the application
     public static void main(String[] args) {
         // Create the GUI on the Event Dispatch Thread
-        SwingUtilities.invokeLater(() -> new PalindromeCheckerGUI());
+        SwingUtilities.invokeLater(() -> new PalindromeChecker());
     }
 }
